@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY rdf_ 'http://protege.stanford.edu/rdf'>
+	 <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:rdf_="&rdf_;"
+	 xmlns:rdfs="&rdfs;">
+<rdfs:Class rdf:about="&rdf_;Category"
+	 rdfs:label="Category">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&rdf_;Context"
+	 rdfs:label="Context">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&rdf_;Evaluation"
+	 rdfs:label="Evaluation">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&rdf_;Gesture"
+	 rdfs:label="Gesture">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&rdf_;User"
+	 rdfs:label="User">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&rdf_;Word"
+	 rdfs:label="Word">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&rdf_;academicTitle"
+	 rdfs:label="academicTitle">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;belongToGesture"
+	 rdfs:label="belongToGesture">
+	<rdfs:domain rdf:resource="&rdf_;Evaluation"/>
+	<rdfs:range rdf:resource="&rdf_;Gesture"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;belongToUser"
+	 rdfs:label="belongToUser">
+	<rdfs:range rdf:resource="&rdf_;User"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;belongsToCategory"
+	 rdfs:label="belongsToCategory">
+	<rdfs:range rdf:resource="&rdf_;Category"/>
+	<rdfs:domain rdf:resource="&rdf_;Word"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;belongsToContext"
+	 rdfs:label="belongsToContext">
+	<rdfs:domain rdf:resource="&rdf_;Category"/>
+	<rdfs:range rdf:resource="&rdf_;Context"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;belongsToUser"
+	 rdfs:label="belongsToUser">
+	<rdfs:domain rdf:resource="&rdf_;Evaluation"/>
+	<rdfs:range rdf:resource="&rdf_;User"/>
+	<rdfs:domain rdf:resource="&rdf_;Word"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;catDescription"
+	 rdfs:label="catDescription">
+	<rdfs:domain rdf:resource="&rdf_;Category"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;catName"
+	 rdfs:label="catName">
+	<rdfs:domain rdf:resource="&rdf_;Category"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;contDescription"
+	 rdfs:label="contDescription">
+	<rdfs:domain rdf:resource="&rdf_;Context"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;contName"
+	 rdfs:label="contName">
+	<rdfs:domain rdf:resource="&rdf_;Context"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;email"
+	 rdfs:label="email">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;gestFile"
+	 rdfs:label="gestFile">
+	<rdfs:domain rdf:resource="&rdf_;Gesture"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;hasManyCategories"
+	 rdfs:label="hasManyCategories">
+	<rdfs:range rdf:resource="&rdf_;Category"/>
+	<rdfs:domain rdf:resource="&rdf_;Context"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;hasManyEvaluation"
+	 rdfs:label="hasManyEvaluation">
+	<rdfs:range rdf:resource="&rdf_;Evaluation"/>
+	<rdfs:domain rdf:resource="&rdf_;Gesture"/>
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;hasManyWords"
+	 rdfs:label="hasManyWords">
+	<rdfs:domain rdf:resource="&rdf_;Category"/>
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdf_;Word"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;hasOneGesture"
+	 rdfs:label="hasOneGesture">
+	<rdfs:range rdf:resource="&rdf_;Gesture"/>
+	<rdfs:domain rdf:resource="&rdf_;Word"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;hasOneWord"
+	 rdfs:label="hasOneWord">
+	<rdfs:domain rdf:resource="&rdf_;Gesture"/>
+	<rdfs:range rdf:resource="&rdf_;Word"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;id"
+	 rdfs:label="id">
+	<rdfs:domain rdf:resource="&rdf_;Category"/>
+	<rdfs:domain rdf:resource="&rdf_;Context"/>
+	<rdfs:domain rdf:resource="&rdf_;Evaluation"/>
+	<rdfs:domain rdf:resource="&rdf_;Gesture"/>
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:domain rdf:resource="&rdf_;Word"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;institution"
+	 rdfs:label="institution">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;lattes"
+	 rdfs:label="lattes">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;liked_it"
+	 rdfs:label="liked_it">
+	<rdfs:domain rdf:resource="&rdf_;Evaluation"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;name"
+	 rdfs:label="name">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;password"
+	 rdfs:label="password">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;typeAccount"
+	 rdfs:label="typeAccount">
+	<rdfs:domain rdf:resource="&rdf_;User"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&rdf_;word"
+	 rdfs:label="word">
+	<rdfs:domain rdf:resource="&rdf_;Word"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+</rdf:RDF>

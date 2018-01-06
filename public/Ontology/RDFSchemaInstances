@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY rdf_ 'http://protege.stanford.edu/rdf'>
+	 <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:rdf_="&rdf_;"
+	 xmlns:rdfs="&rdfs;">
+<rdf_:User rdf:about="&rdf_;KB_651460_Instance_35"
+	 rdf_:academicTitle="Doctor"
+	 rdf_:email="eltoneloi@poli.ufrj.br"
+	 rdf_:id="1"
+	 rdf_:institution="UFRRJ"
+	 rdf_:lattes="NADA"
+	 rdf_:name="Elton Silva"
+	 rdf_:password="2799JARBAS"
+	 rdf_:typeAccount="commom"
+	 rdfs:label="KB_651460_Instance_35"/>
+<rdf_:Context rdf:about="&rdf_;KB_651460_Instance_36"
+	 rdf_:contDescription="NADA"
+	 rdf_:contName="Computação"
+	 rdf_:id="1"
+	 rdfs:label="KB_651460_Instance_36">
+	<rdf_:hasManyCategories rdf:resource="&rdf_;KB_651460_Instance_37"/>
+</rdf_:Context>
+<rdf_:Category rdf:about="&rdf_;KB_651460_Instance_37"
+	 rdf_:catDescription="NADA"
+	 rdf_:catName="Hardware"
+	 rdf_:id="1"
+	 rdfs:label="KB_651460_Instance_37">
+	<rdf_:belongsToContext rdf:resource="&rdf_;KB_651460_Instance_36"/>
+	<rdf_:hasManyWords rdf:resource="&rdf_;KB_651460_Instance_38"/>
+</rdf_:Category>
+<rdf_:Word rdf:about="&rdf_;KB_651460_Instance_38"
+	 rdf_:id="1"
+	 rdf_:word="SSD"
+	 rdfs:label="KB_651460_Instance_38">
+	<rdf_:belongsToUser rdf:resource="&rdf_;KB_651460_Instance_35"/>
+	<rdf_:belongsToCategory rdf:resource="&rdf_;KB_651460_Instance_37"/>
+	<rdf_:hasOneGesture rdf:resource="&rdf_;KB_651460_Instance_39"/>
+</rdf_:Word>
+<rdf_:Gesture rdf:about="&rdf_;KB_651460_Instance_39"
+	 rdf_:gestFile="https://www.youtube.com/embed/4IJmn65GmXw"
+	 rdf_:id="1"
+	 rdfs:label="KB_651460_Instance_39">
+	<rdf_:hasOneWord rdf:resource="&rdf_;KB_651460_Instance_38"/>
+	<rdf_:hasManyEvaluation rdf:resource="&rdf_;KB_651460_Instance_40"/>
+</rdf_:Gesture>
+<rdf_:Evaluation rdf:about="&rdf_;KB_651460_Instance_40"
+	 rdf_:id="1"
+	 rdf_:liked_it="y"
+	 rdfs:label="KB_651460_Instance_40">
+	<rdf_:belongToGesture rdf:resource="&rdf_;KB_651460_Instance_39"/>
+</rdf_:Evaluation>
+</rdf:RDF>
